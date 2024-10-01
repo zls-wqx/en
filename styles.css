@@ -109,6 +109,25 @@ h1 {
     margin-bottom: 10px;
 }
 
+.button {
+            background-color: #28A745; /* 按钮背景颜色 */
+            color: white; /* 按钮文字颜色 */
+            border: none; /* 无边框 */
+            padding: 10px 20px; /* 内边距 */
+            text-align: center; /* 文本居中 */
+            text-decoration: none; /* 去掉下划线 */
+            display: inline-block; /* 让按钮水平排列 */
+            font-size: 16px; /* 字体大小 */
+            margin: 4px 2px; /* 外边距 */
+            cursor: pointer; /* 鼠标悬停时变为手指 */
+            border-radius: 5px; /* 圆角 */
+            transition: background-color 0.3s; /* 过渡效果 */
+        }
+
+        .button:hover {
+            background-color: #218838; /* 鼠标悬停时的背景颜色 */
+        }
+
 /* 服务项目 */
 .service-item {
     margin-top: 20px;
