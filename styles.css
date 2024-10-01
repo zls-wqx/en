@@ -332,10 +332,18 @@ body {
     .team-member {
         flex: 1 1 100%;
     }
+}
 
-    .login-section,
-    .register-form-container {
-        max-width: 100%;
-        margin: 0 10px;
+@media (max-width: 480px) {
+    nav .logo {
+        font-size: 18px;
+    }
+
+    nav .nav-links li a {
+        font-size: 12px;
+    }
+
+    h1 {
+        font-size: 24px;
     }
 }
