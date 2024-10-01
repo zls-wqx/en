@@ -300,16 +300,15 @@ footer {
     color: white;
     text-align: center;
     padding: 15px;
-    position: fixed;
-    bottom: 0;
     width: 100%;
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
     z-index: 10; /* 确保页脚不会被其他内容覆盖 */
 }
 
+/* 移除固定页脚的样式，确保它在页面底部显示，而不随用户滚动 */
 body {
     margin: 0;
-    padding-bottom: 60px; /* 留出空间给固定的页脚，防止内容被覆盖 */
+    padding-bottom: 0; /* 移除了为固定页脚留出的空白 */
 }
 
 /* 响应式设计 */
@@ -332,18 +331,10 @@ body {
     .team-member {
         flex: 1 1 100%;
     }
-}
 
-@media (max-width: 480px) {
-    nav .logo {
-        font-size: 18px;
-    }
-
-    nav .nav-links li a {
-        font-size: 12px;
-    }
-
-    h1 {
-        font-size: 24px;
+    .login-section,
+    .register-form-container {
+        width: 100%;
+        padding: 15px;
     }
 }
