@@ -6,7 +6,7 @@ body {
     background-color: #f8f9fa;
     color: #333;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* 确保纵向排列 */
     align-items: center;
     justify-content: flex-start;
     min-height: 100vh;
@@ -27,6 +27,7 @@ nav .logo {
     color: #ffffff;
     font-size: 24px;
     font-weight: bold;
+    text-transform: uppercase;
 }
 
 nav .nav-links {
@@ -37,7 +38,7 @@ nav .nav-links {
 }
 
 nav .nav-links li {
-    margin-left: 20px;
+    margin-left: 15px;
 }
 
 nav .nav-links li a {
@@ -46,129 +47,67 @@ nav .nav-links li a {
     font-size: 14px;
     padding: 8px 16px;
     border-radius: 4px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 nav .nav-links li a:hover {
     background-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
 }
 
 /* 页面主内容 */
 section {
     padding: 20px;
-    max-width: 1200px;
-    width: 100%;
+    max-width: 800px; /* 控制主内容宽度 */
+    width: 100%; /* 100% 宽度 */
     margin: auto;
 }
 
-h1 {
-    color: #333;
-    font-size: 32px;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-/* 反馈容器 */
-.feedback-container {
-    width: 400px;
-    height: auto;
-    border: 2px solid #0078d4; /* Microsoft 蓝 */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    margin: 20px auto;
-    background-color: #ffffff;
-}
-
-/* 反馈滑块 */
-.feedback-slide {
-    display: flex;
-    align-items: center;
-    padding: 15px;
-}
-
-.avatar-container {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin-right: 15px;
-    border: 2px solid #0078d4; /* Microsoft 蓝 */
-}
-
-.avatar {
-    width: 100%;
-    height: auto;
-}
-
-/* 团队成员样式 */
+/* 团队样式 */
 .team {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 20px;
+    flex-direction: column; /* 纵向排列团队成员 */
+    align-items: center; /* 居中对齐 */
+    width: 100%;
 }
 
 .team-member {
-    flex: 1 1 calc(50% - 20px);
-    margin: 10px;
+    width: 90%; /* 控制每个团队成员的宽度 */
+    margin: 10px 0; /* 竖直间隔 */
     background-color: #ffffff;
     padding: 20px;
     border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.team-member:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-}
-
-.team-member img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-}
-
-/* 按钮样式 */
-.button {
-    background-color: #0078d4; /* Microsoft 蓝 */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 10px 0;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.button:hover {
-    background-color: #005a9e; /* 深蓝 */
-}
-
-/* 页脚样式 */
-footer {
-    background-color: #f1f1f1;
-    color: #333;
-    text-align: center;
-    padding: 15px;
-    width: 100%;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 /* 响应式设计 */
 @media (max-width: 768px) {
-    nav .nav-links {
+    nav {
         flex-direction: column;
         align-items: flex-start;
     }
 
-    .team-member {
-        flex: 1 1 100%;
+    nav .nav-links {
+        flex-direction: column;
+        width: 100%;
     }
+
+    nav .nav-links li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .team-member {
+        width: 100%; /* 在小屏幕上占满宽度 */
+    }
+}
+
+/* 页脚样式 */
+footer {
+    background: #0078d4; /* Microsoft 蓝 */
+    color: white;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
 }
